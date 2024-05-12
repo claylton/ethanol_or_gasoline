@@ -1,6 +1,5 @@
-import 'package:ethanol_or_gasoline/widgets/input_widget.dart';
-import 'package:ethanol_or_gasoline/widgets/loading_button_widget.dart';
 import 'package:ethanol_or_gasoline/widgets/logo_widget.dart';
+import 'package:ethanol_or_gasoline/widgets/submit_forms.dart';
 import 'package:ethanol_or_gasoline/widgets/success_card_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -36,16 +35,12 @@ class HomePage extends StatelessWidget {
           const LogoWidget(),
           SuccessCardWidget(
             label: "Compensa utilizar X",
-            onPressed: (){},
-          ),
-          InputWidget(label: "Gasolina"),
-          InputWidget(label: "Etanol"),
-          LoadingButtonWidget(
-            isLoading: true,
-            invertColors: false,
             onPressed: () {},
-            label: "CALCULAR",
-          )
+          ),
+          SubmitForms(
+            isLoading: false,
+            onPressed: () {},
+          ),
         ],
       ),
     );
