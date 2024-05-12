@@ -16,7 +16,7 @@ class LogoWidget extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         const Text(
-          'Saiba qual a melhor opção para abastecimento do seu carro',
+          'Etanol ou Gasolina',
           style: TextStyle(color: Colors.white, fontSize: 25, fontFamily: "Big Shoulders Display"),
           textAlign: TextAlign.center,
         ),
