@@ -34,6 +34,27 @@ class HomePage extends StatelessWidget {
           const LogoWidget(),
           InputWidget(label: "Gasolina"),
           InputWidget(label: "Etanol"),
+          TextButton(
+            child: Container(
+              margin: const EdgeInsets.all(10),
+              height: 60,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.8),
+                // shape: BoxShape.circle,
+                borderRadius: BorderRadius.circular(60),
+              ),
+              child: Text(
+                "CALCULAR",
+                style: TextStyle(
+                  color: Theme.of(context).primaryColor,
+                  fontSize: 25,
+                  fontFamily: "Big Shoulders Display",
+                )
+              ),
+            ),
+            onPressed: () {},
+          ),
         ],
       ),
     );
