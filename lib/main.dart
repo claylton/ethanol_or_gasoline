@@ -32,26 +32,67 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           const LogoWidget(),
+          Container(
+            margin: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.8),
+              borderRadius: BorderRadius.circular(25),
+            ),
+            child: Column(
+              children: <Widget>[
+                const SizedBox(height: 50),
+                Text(
+                  "Compensa utilizar etanol",
+                  style: TextStyle(
+                    color: Theme.of(context).primaryColor,
+                    fontSize: 40,
+                    fontFamily: "Big Shoulders Display",
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 20),
+                TextButton(
+                  child: Container(
+                    margin: const EdgeInsets.all(10),
+                    height: 60,
+                    width: double.infinity,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.8),
+                      // shape: BoxShape.circle,
+                      borderRadius: BorderRadius.circular(60),
+                    ),
+                    child: Text("CALCULAR NOVAMENTE",
+                        style: TextStyle(
+                          color: Theme.of(context).primaryColor,
+                          fontSize: 25,
+                          fontFamily: "Big Shoulders Display",
+                        )),
+                  ),
+                  onPressed: () {},
+                ),
+              ],
+            ),
+          ),
           InputWidget(label: "Gasolina"),
           InputWidget(label: "Etanol"),
           TextButton(
             child: Container(
               margin: const EdgeInsets.all(10),
               height: 60,
+              width: double.infinity,
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 color: Colors.white.withOpacity(0.8),
                 // shape: BoxShape.circle,
                 borderRadius: BorderRadius.circular(60),
               ),
-              child: Text(
-                "CALCULAR",
-                style: TextStyle(
-                  color: Theme.of(context).primaryColor,
-                  fontSize: 25,
-                  fontFamily: "Big Shoulders Display",
-                )
-              ),
+              child: Text("CALCULAR",
+                  style: TextStyle(
+                    color: Theme.of(context).primaryColor,
+                    fontSize: 25,
+                    fontFamily: "Big Shoulders Display",
+                  )),
             ),
             onPressed: () {},
           ),
