@@ -1,6 +1,6 @@
-import 'package:ethanol_or_gasoline/widgets/logo_widget.dart';
-import 'package:ethanol_or_gasoline/widgets/submit_forms.dart';
-import 'package:ethanol_or_gasoline/widgets/success_card_widget.dart';
+import 'package:ethanol_or_gasoline/pages/home_page.dart';
+
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,30 +19,6 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepPurple,
       ),
       home: HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
-      body: ListView(
-        children: <Widget>[
-          const LogoWidget(),
-          SuccessCardWidget(
-            label: "Compensa utilizar X",
-            onPressed: () {},
-          ),
-          SubmitForms(
-            isLoading: false,
-            onPressed: () {},
-          ),
-        ],
-      ),
     );
   }
 }

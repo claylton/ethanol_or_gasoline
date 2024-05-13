@@ -4,8 +4,9 @@ import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 class InputWidget extends StatelessWidget {
   final MaskTextInputFormatter _maskTextInputFormatter = MaskTextInputFormatter(mask: '#,##');
   late final String label;
+  TextEditingController textEditingController = TextEditingController();
 
-  InputWidget({required this.label, super.key});
+  InputWidget({required this.label, required this.textEditingController, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,7 @@ class InputWidget extends StatelessWidget {
         const SizedBox(width: 20),
         Expanded(
           child: TextFormField(
-            initialValue: "0,00",
+            controller: textEditingController,
             inputFormatters: [_maskTextInputFormatter],
             keyboardType: TextInputType.number,
             style: const TextStyle(
