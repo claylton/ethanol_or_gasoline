@@ -16,26 +16,32 @@ class _HomePageState extends State<HomePage> {
   final TextEditingController _textEthanolEditingController = TextEditingController(text: "0,00");
   final TextEditingController _textGasolineEditingController = TextEditingController(text: "0,00");
   String _resultText = "Compensa utilizar X";
+  Color? _backgroundColor;
 
   @override
   Widget build(BuildContext context) {
+    _backgroundColor = _backgroundColor ?? Theme.of(context).primaryColor;
+    
     return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
-      body: ListView(
-        children: <Widget>[
-          const LogoWidget(),
-          _isSuccess
-              ? SuccessCardWidget(
-                  label: _resultText,
-                  onPressed: reset,
-                )
-              : SubmitForms(
-                  isLoading: _isLoading,
-                  textEthanolEditingController: _textEthanolEditingController,
-                  textGasolineEditingController: _textGasolineEditingController,
-                  onPressed: calculate,
-                ),
-        ],
+      body: AnimatedContainer(
+        duration: const Duration(milliseconds: 1200),
+        color: _backgroundColor,
+        child: ListView(
+          children: <Widget>[
+            const LogoWidget(),
+            _isSuccess
+                ? SuccessCardWidget(
+                    label: _resultText,
+                    onPressed: reset,
+                  )
+                : SubmitForms(
+                    isLoading: _isLoading,
+                    textEthanolEditingController: _textEthanolEditingController,
+                    textGasolineEditingController: _textGasolineEditingController,
+                    onPressed: calculate,
+                  ),
+          ],
+        ),
       ),
     );
   }
@@ -61,6 +67,7 @@ class _HomePageState extends State<HomePage> {
           }
           _isLoading = false;
           _isSuccess = true;
+          _backgroundColor = Colors.deepPurpleAccent;
         })
       },
     );
@@ -72,6 +79,7 @@ class _HomePageState extends State<HomePage> {
       _textGasolineEditingController.text = "0,00";
       _isSuccess = false;
       _isLoading = false;
+      _backgroundColor = Theme.of(context).primaryColor;
     });
   }
 }
