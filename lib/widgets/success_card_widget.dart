@@ -39,7 +39,8 @@ class SuccessCardWidget extends StatelessWidget {
             invertColors: true,
             onPressed: onPressed,
             label: "CALCULAR NOVAMENTE",
-          )
+          ),
+          const SizedBox(height: 30),
         ],
       ),
     );
