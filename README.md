@@ -29,7 +29,7 @@
 
 
 ## 💻 Sobre a aplicação
-⛽ Uma aplicação em flutter para ajudar a calcular se vale a pena abastecer com etanol ou gasolina ao depender do preço 😎
+⛽ Uma aplicação em flutter para ajudar a calcular se vale a pena abastecer com etanol ou gasolina ao depender do preço, utilizando a componentização de widgets na aplicação 😎
 
 ---
 
